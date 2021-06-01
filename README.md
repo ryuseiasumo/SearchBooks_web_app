@@ -17,6 +17,27 @@
 * flask-login 0.5.0
 * flask-sqlalchemy 2.5.1
 
+# Requirement
+* python
+* pandas
+* flask
+* flask-login
+* flask-sqlalchemy
+
+# Installation
+## flask周りのインストール
+### pip 
+```bash
+$ pip install Flask
+$ pip install flask-login
+$ pip install -U Flask-SQLAlchemy
+```
+### conda
+```bash
+$ conda install -c anaconda flask
+$ conda install -c anaconda flask-login
+$ conda install -c conda-forge flask-sqlalchemy
+```
 
 # 使用方法
 ```bash
