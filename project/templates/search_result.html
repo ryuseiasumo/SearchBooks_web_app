@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">検索一覧</h1>
+
+{% if books %}
+<table border="2" width="100%">
+<tr bgcolor="#f39800" ><th width="5%">No.</th><th width="5%">書籍ID</th><th width="30%">タイトル</th><th width="12%">著者名</th><th width="30%">収録</th><th width="18%">出版社</th></tr>
+{% for book in books %}
+  <tr bgcolor="#ffffff" style="color:#000000">
+    <td>{{ book[0] }}</td>
+    <td>{{ book[1] }}</td>
+    <td>{{ book[2] }}</td>
+    <td>{{ book[3] }}</td>
+    <td>{{ book[4] }}</td>
+    <td>{{ book[5] }}</td>
+  </tr>
+{% endfor %}
+</table>
+
+{% else %}
+  <h1 class="title">検索結果なし</h1>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">検索一覧</h1>
+
+<p>
+  <font size="6">
+    {{ name }}の検索履歴
+  </font>
+</p>
+
+{% if histories %}
+<table border="2" width="100%">
+<!-- <tr ><th width="5%">ユーザID</th><th width="20%">ユーザ名</th><th width="20%">検索ワード</th><th width="10%">検索回数</th></tr>-->
+<tr bgcolor="#f39800" ><th width="30%">検索ワード</th><th width="10%">検索回数</th></tr>
+{% for history in histories %}
+  <tr bgcolor="#ffffff" style="color:#000000">
+    <!-- <td>{{ history[1] }}</td>
+    <td>{{ history[2] }}</td> -->
+    <td>{{ history[3] }}</td>
+    <td>{{ history[4] }}</td>
+  </tr>
+{% endfor %}
+</table>
+
+{% else %}
+  <h1 class="title">履歴なし</h1>
+{% endif %}
+
+<br>
+<br>
+<p>
+  <font size="6">
+    人気検索ワードランキング
+  </font>
+</p>
+
+{% if search_ranking_top30 %}
+<table border="2" width="100%">
+<tr bgcolor="#f39800"><th width="10%">No.</th><th width="30%">検索ワード</th><th width="13.3%">検索回数</th></tr>
+{% for search_ranking_word in search_ranking_top30 %}
+  <tr bgcolor="#ffffff" style="color:#000000">
+    <td>{{ search_ranking_word[0] }}</td>
+    <td>{{ search_ranking_word[1] }}</td>
+    <td>{{ search_ranking_word[2] }}</td>
+  </tr>
+{% endfor %}
+</table>
+{% else %}
+  <h1 class="title">ランキング情報なし</h1>
+{% endif %}
+
+{% endblock %}
