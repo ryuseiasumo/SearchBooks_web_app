@@ -21,6 +21,7 @@
 # 使用方法
 ```bash
 $ git clone https://github.com/ryuseiasumo/SearchBooks_web_app.git
+$ cd SearchBooks_web_app
 $ export FLASK_APP=project
 $ export FLASK_DEBUG=1
 $ python make_db.py #データベースの作成、初期化
@@ -31,5 +32,5 @@ $ flask run
 ```bash
 $ flask run
 ```
-をすると, 以下が表示されると思うので, http以下からブラウザでWebアプリを利用して下さい．
-* Running on http://〇〇 (Press CTRL+C to quit)
+をすると, 以下のローカルホストのリンクが表示されるので、ここからWebアプリを利用して下さい．
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
